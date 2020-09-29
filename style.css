@@ -1,0 +1,14 @@
+body{
+    background:  linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('imp.jpg');
+    background-position: centre;
+    background-size: cover;
+    min-height: 100vh;
+    color: rgb(182, 192, 47);
+} 
+
+label{
+    display: block;
+}
+form{
+    margin-left: 40%;
+}

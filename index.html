@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- linking style file -->
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FEEDBACK FORM</title>
+</head>
+
+<body>
+    <!-- heading -->
+    
+    <h1>FEEDBACK FORM</h1>
+ 
+    <p>This is a feedback form provided by our company.<br> If you have query regarding the issues you were face while using the device, please fill the form below. Feel free to contact us by the details given in the end of the form.</p>
+    <p>Please fill in this form.</p>
+    <hr>
+    <form action="action_page.php">
+        <div class="container">
+          <!-- forms input feild starts from here -->
+           
+            <h3>Personal Details :</h3>
+            <!-- input name -->
+            <label for="name">Name</label>
+            
+            <input style="width: 300px;" type="text" id="name" name="name" placeholder="Your name.." onblur="checkname()" required>
+            <span id="nam"></span>
+            <br>
+            <!-- input email -->
+
+            <label for="email">Email</label>
+            <input style="width: 300px;" type="email" placeholder="Enter Email" name="email" id="email" required>
+            <br>
+            <!-- input adress -->
+            <label for="adr">Adress</label>
+            <input style="width: 300px;" type="text" id="adr" name="adress" placeholder="street..state" required>
+            <br>
+            <!-- input pin code -->
+            <label for="pin">Pin Code</label>
+            <input style="width: 300px;" type="number" id="pin" name="pincode" placeholder="6 digit number" onblur="checkpin()" required>
+            <span id="digit"></span>
+            <br>
+            <!-- input contact -->
+            <label for="">Contact</label>
+            <input style="width: 300px;" type="number" id="number" name="phone" placeholder="10 digit number" onblur="checkphone()" required>
+            <span id="num"></span>
+            <br>
+            <h3>Query :</h3>
+            <input type="radio" name="Query" id="select1">Techincal issue
+            <br>
+
+            <input type="radio" name="Query" id="select2">Online server issue
+            <br>
+
+            <input type="radio" name="Query" id="select3">Others
+            <br>
+            <label for="description"> Describe your problem here.</label>
+            <br>
+            <textarea name="" id="" cols="30" rows="10"></textarea>
+
+           <!-- <button type="clear" class="clearbtn">CLEAR</button> -->
+            <input type="reset" value="clear">
+
+    </form>
+    <!-- description of javascript function -->
+    <script>
+        function checkname(){
+            var name = document.getElementById("name").value;
+           if(name == ' '|| name == null)
+            //alert("Name cannot be blank");
+            document.getElementById("nam").innerHTML = "incorrect input";
+            else 
+            document.getElementById("nam").innerHTML = "";
+        }
+
+        function checkpin(){
+            var val = document.getElementById("pin").value;
+            if(val.length != 6)
+           // alert("Incorrect pin");
+           document.getElementById("digit").innerHTML = "incorrect input";
+           else document.getElementById("digit").innerHTML = "";
+        }
+
+        function checkphone(){
+            var fon = document.getElementById("number").value;
+            if(fon.length != 10)
+            document.getElementById("num").innerHTML = "incorrect input";
+            else document.getElementById("num").innerHTML = "";
+        }
+
+
+    </script>
+</body>
+
+</html>
